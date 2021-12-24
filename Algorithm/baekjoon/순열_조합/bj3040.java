@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/** 백설공주와 일곱난쟁이 */
 public class bj3040 {
 
 	static int arr[];

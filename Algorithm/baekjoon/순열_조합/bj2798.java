@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/** 블랙잭 */
 public class bj2798 {
 
 	static int N, M, input[];
