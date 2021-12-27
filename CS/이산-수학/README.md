@@ -70,5 +70,5 @@
 - 흔히 같은 의미를 가진 더 쉬운 명제를 발견하는 데 사용
 - 동치법칙에는 다양한 종류가 있음
 - 복잡해 보이는 합성명제도 간단한 명제로 변경 가능
-<p align="center"><img width="278" alt="동치" src="https://user-images.githubusercontent.com/89640705/147439176-1541c80e-7d36-480e-a820-cf1cc8d97d9e.png"></p>
+<p align="left"><img width="278" alt="동치" src="https://user-images.githubusercontent.com/89640705/147439176-1541c80e-7d36-480e-a820-cf1cc8d97d9e.png"></p>
 
