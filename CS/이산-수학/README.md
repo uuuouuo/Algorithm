@@ -132,6 +132,7 @@
   3. 부울 곱 (boolean product)
 
 - 부울 대수 법칙
+![image](https://user-images.githubusercontent.com/89640705/147545053-2e284505-91e3-4c91-8f82-ce8b7f007dfa.png)
 
 </br>
 
@@ -149,3 +150,4 @@
   | 1   | 1   | 1       |
 
   -> f(x, y) = xy
+![image](https://user-images.githubusercontent.com/89640705/147544935-07104c83-da71-416e-a997-c455a090d14b.png)
