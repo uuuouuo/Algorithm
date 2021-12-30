@@ -1,3 +1,5 @@
+package DFS_BFS;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -38,19 +40,22 @@ public class bj9372 {
 	}
 
 	static Queue<Integer> q;
+
 	private static void bfs(int start, int cnt) { // 리스트를 이용한 bfs.
 		q = new LinkedList<Integer>();
 		q.add(start); // 시작점 큐에 담기.
 		visited[start] = true; // 시작점 방문 체크.
-		
-		while (!q.isEmpty()) { 
+
+		while (!q.isEmpty()) {
 			int cur = q.poll(); // 큐에 담긴 숫자 꺼내기.
 			for (int i = 0; i < list[cur].size(); i++) { // 현재 숫자의 접점만 검사 ㄴ|｀O′|ㄱ !!!
 				int next = list[cur].get(i); // 현재 숫자의 접점 ㄴ|｀O′|ㄱ !!!
-				
-				if (visited[next]) continue; // 만약 이미 방문했으면 패스.
-				visited[next] = true;  // 아니면 방문체크하고
-				cnt++; q.add(next); // 카운팅, 다음 숫자 큐에 담기.
+
+				if (visited[next])
+					continue; // 만약 이미 방문했으면 패스.
+				visited[next] = true; // 아니면 방문체크하고
+				cnt++;
+				q.add(next); // 카운팅, 다음 숫자 큐에 담기.
 			}
 		}
 

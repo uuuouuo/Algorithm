@@ -1,6 +1,9 @@
+package DFS_BFS;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+
 /** 토마토 */
 public class bj7576 {
 
@@ -31,14 +34,14 @@ public class bj7576 {
 		for (int r = 0; r < N; r++) {
 			for (int c = 0; c < M; c++) {
 				box[r][c] = sc.nextInt();
-				if (box[r][c] == 1) 
+				if (box[r][c] == 1)
 					q.add(new Point(r, c, 0));
 
 			}
 		}
 
 		bfs();
-				
+
 		for (int r = 0; r < N; r++) {
 			for (int c = 0; c < M; c++) {
 				if (box[r][c] == 0) {
@@ -47,7 +50,7 @@ public class bj7576 {
 				}
 			}
 		}
-		
+
 		System.out.println(ans);
 
 	}
