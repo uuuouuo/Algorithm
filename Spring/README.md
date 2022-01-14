@@ -1,4 +1,4 @@
-# 1. 스프링이란 ?
+# 스프링이란 ?
 
 ## 스프링 생태계
 
@@ -132,3 +132,14 @@
   - 다형성 만으로는 쉽게 부품을 갈아 끼우듯이 개발 못함
   - 다형성 만으로는 구현 객체 변경 시 클라이언트 코드도 함께 변경
   - 다형성 만으로는 OCP, DIP 지키지 못함
+
+<br>
+
+## IntelliJ 단축키 (window)
+
+- Generate : Alt + Insert (Getter, Setter, Construct 등)
+- Import : Alt + Enter
+- Introduce Variable : Ctrl + Alt + v (변수 이름 생성)
+- 라인 복사 : Ctrl + d
+- 라인 삭제 : Ctrl + y
+- 라인 이동 : Alt + Shift
