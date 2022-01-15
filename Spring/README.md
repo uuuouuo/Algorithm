@@ -143,3 +143,16 @@
 - 라인 복사 : Ctrl + d
 - 라인 삭제 : Ctrl + y
 - 라인 이동 : Alt + Shift
+
+# application.properties 설정
+
+- DDL generation
+  - spring.jpa.generate-ddl=true
+    - true 설정 시 해당 데이터를 근거로 서버 시작 시점에 DDL문 생성으로 DB에 적용
+- spring.jpa.hibernate.ddl-auto=( )
+  - 대부분 구현체로 Hibernate 사용하기 때문에, 이를 통해 보다 상세한 데이터베이스 초기화 전략 설정
+  - none : 아무것도 실행 않함 (대부분의 DB 기본값)
+  - create-drop: SessionFactory가 시작할 때 drop 후 create, 종료 때 drop 실행
+  - create: SessionFactory가 시작될 때 데이터베이스 drop 실행 후 생성된 DDL 실행
+  - update: 변경된 스키마 적용
+  - vaildate: 변경된 스키마 있으면, 변경점 출력 후 어플리케이션 종료
