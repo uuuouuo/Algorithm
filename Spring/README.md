@@ -155,4 +155,4 @@
   - create-drop: SessionFactory가 시작할 때 drop 후 create, 종료 때 drop 실행
   - create: SessionFactory가 시작될 때 데이터베이스 drop 실행 후 생성된 DDL 실행
   - update: 변경된 스키마 적용
-  - vaildate: 변경된 스키마 있으면, 변경점 출력 후 어플리케이션 종료
+  - validate: 변경된 스키마 있으면, 변경점 출력 후 어플리케이션 종료

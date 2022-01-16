@@ -36,3 +36,21 @@
   - null, "", " " 모두 허용하지 않음
 - @Builder
   - 생성자에 명시
+- @RequiredArgsConstructor
+
+  ```java
+   private final IBoardItemService boardItemService;
+
+   // 기존 생성자 생성 방법
+   public BoardController(IBoardItemService boardItemService) {
+       this.boardItemService = boardItemService;
+  }
+  ```
+
+  - 어노테이션을 통해 생성자 주입 가능
+
+- @Transactional
+  - 트랜잭션 기능이 적용된 프록시 객체가 생성
+  - readOnly 속성
+    - 트랜잭션 읽기 전용
+    - 성능 최적화를 위해 사용, 특정 트랜잭션 작업 안에서 쓰기 작업이 일어나는 것을 의도적으로 방지
