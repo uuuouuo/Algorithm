@@ -143,6 +143,9 @@
 - 라인 복사 : Ctrl + d
 - 라인 삭제 : Ctrl + y
 - 라인 이동 : Alt + Shift
+- JUnit5 test 파일 생성: 메소드 이름에서 Ctrl + Shift + T
+- Assertions static 으로 만들기: Alt + Enter
+- 해당 클래스로 이동: Ctrl + Alt + B
 
 # application.properties 설정
 
