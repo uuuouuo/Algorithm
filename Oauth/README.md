@@ -1,6 +1,7 @@
 # Spring Boot Oauth2 소셜 로그인 가이드
 
 - Oauth2
+
   - 보안수준이 어느정도 검증된 플랫폼의 API를 이용하여 사용자 인증과 리소스에 대한 권한 획득(인가)을 할 수 있도록 해주는 역할
   - OAuth 구성 요소
     1. Resource Owner: 사용자
@@ -11,10 +12,14 @@
     1. 외부 플랫폼을 통해 페이스북 인증 서버(Authorization Server)에 인증 요청
     2. 외부 플랫폼은 저의 페이스북 정보들(이름, 나이, 프로필 사진 등)을 사용할 수 있는 권한을 얻음
   - 인증 종류
+
     1. Authorization Code Grant: 권한 코드 승인 방식
     2. Implicit Grant: 암시적 승인 방식
     3. Password Credentials Grant: 비밀번호 자격 증명 방식
     4. Client Credentials Grant: 클라이언트 자격 증명 방식
+
+    <br>
+
 - Spring Security
 
   - Spring 기반의 어플리케이션 권한과 인증, 인가 등의 보안을 담당하는 하위 프레임워크

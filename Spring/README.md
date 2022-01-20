@@ -146,6 +146,9 @@
 - JUnit5 test 파일 생성: 메소드 이름에서 Ctrl + Shift + T
 - Assertions static 으로 만들기: Alt + Enter
 - 해당 클래스로 이동: Ctrl + Alt + B
+- 괄호 무시하고 enter: Ctrl + Shift + Enter
+
+-iter: 배열이 있으면 for 문 생성
 
 # application.properties 설정
 
