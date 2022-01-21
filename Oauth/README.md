@@ -1,24 +1,25 @@
 # Spring Boot Oauth2 소셜 로그인 가이드
 
-- Oauth2
+## Oauth2
 
-  - 보안수준이 어느정도 검증된 플랫폼의 API를 이용하여 사용자 인증과 리소스에 대한 권한 획득(인가)을 할 수 있도록 해주는 역할
-  - OAuth 구성 요소
-    1. Resource Owner: 사용자
-    2. Client: 리소스 서버에서 제공해주는 자원을 사용하는 외부 플랫폼
-    3. Authorization Server: 외부 플랫폼이 리소스 서버의 사용자 자원을 사용하기 위한 인증 서버
-    4. Resource Server: 사용자의 자원을 제공해주는 서버
-    - ex) 페이스북 로그인 기능을 지원하는 외부 플랫폼에 로그인 하려고 할 때,
-    1. 외부 플랫폼을 통해 페이스북 인증 서버(Authorization Server)에 인증 요청
-    2. 외부 플랫폼은 저의 페이스북 정보들(이름, 나이, 프로필 사진 등)을 사용할 수 있는 권한을 얻음
-  - 인증 종류
+- 보안수준이 어느정도 검증된 플랫폼의 API를 이용하여 사용자 인증과 리소스에 대한 권한 획득(인가)을 할 수 있도록 해주는 역할
+- OAuth 구성 요소
+  1. Resource Owner: 사용자
+  2. Client Application: 사용자가 사용하는 서비스 플랫폼
+  3. Authorization Server: OAuth를 통해 인증, 인가를 제공해주는 서버. 인증 서버. 토큰을 발급해줌(ex. github, naver, kakao, google)
+  4. Resource Server: OAuth를 통해 인증, 인가를 제공해주는 서버. 자원 서버. 자원(이름, 이메일, 프로필 사진 등)을 제공해줌ex. github, naver, kakao, google)
+- 인증 종류
 
-    1. Authorization Code Grant: 권한 코드 승인 방식
-    2. Implicit Grant: 암시적 승인 방식
-    3. Password Credentials Grant: 비밀번호 자격 증명 방식
-    4. Client Credentials Grant: 클라이언트 자격 증명 방식
+  1. Authorization Code Grant: 권한 코드 승인 방식 (대부분의 방식!)
+  2. Implicit Grant: 암시적 승인 방식
+  3. Password Credentials Grant: 비밀번호 자격 증명 방식
+  4. Client Credentials Grant: 클라이언트 자격 증명 방식
 
-    <br>
+- Authorization Code Grant 방식 흐름도
+  ![image](https://user-images.githubusercontent.com/89640705/150351714-48e35fd9-7469-426e-a06b-31e62ebe16a7.png)
+
+  ![image](https://user-images.githubusercontent.com/89640705/150351161-fcff36b6-71a4-4b32-b15d-14ffdfa8da86.png)
+  <br>
 
 - Spring Security
 
