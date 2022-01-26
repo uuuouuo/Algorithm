@@ -1,8 +1,57 @@
 # JPA
 
+- Java Persistennce API
+- 자바 진영의 ORM 기술 표준
+
+  - ORM (Object-relational Mapping)
+
+- JPA 동작 설명
+  ![image](https://user-images.githubusercontent.com/89640705/151112173-204cdb89-9586-450d-96dc-90f98ef8ab85.png)
+  ![image](https://user-images.githubusercontent.com/89640705/151112215-b99be765-fb70-4f5a-a00f-30e91bd12d0f.png)
+  ![image](https://user-images.githubusercontent.com/89640705/151112238-bbeebc3f-445e-4721-a825-5eced2103c9d.png)
+
+- JPA 생산성
+  ![image](https://user-images.githubusercontent.com/89640705/151113473-bdbfc35b-860c-47f4-92e3-6b0f660a1e70.png)
+
+  - 특히 update 유용
+
+- 주의할 점
+
+  1. 엔티티 매니저 팩토리는 하나만 생성해서 애플리케이션 전체에서 공유
+  2. 엔티티 매니저는 쓰레드간 공유 X
+  3. JPA의 모든 데이터 변경은 트랜잭션 안에서 실행 🎇
+
+- 예제 1)
+
+```java
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class JpaMain {
+    public static void main(String[] args) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
+        emf.createEntityManager();
+    }
+}
+```
+
+## application.property
+
+- DB 설정
+  > spring.datasouce.url=  
+  > spring.datasource.driverClassName=  
+  > spring.datasource.username=  
+  > spring.datasource.password=
+- JPA 설정
+  > spring.jpa.hibernate.ddl-auto=update  
+  > spring.jpa.generate-ddl=true  
+  > spring.jpa.show-sql=true  
+  > spring.jpa.database=h2  
+  > spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
 ## JPA dependency
 
-- implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+> implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 ## JPA Annotation
 
@@ -38,6 +87,8 @@
   - 생성자에 명시
 - @RequiredArgsConstructor
 
+  - 어노테이션을 통해 생성자 주입 가능
+
   ```java
    private final IBoardItemService boardItemService;
 
@@ -46,8 +97,6 @@
        this.boardItemService = boardItemService;
   }
   ```
-
-  - 어노테이션을 통해 생성자 주입 가능
 
 - @Transactional
   - 트랜잭션 기능이 적용된 프록시 객체가 생성
