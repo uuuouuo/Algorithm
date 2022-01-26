@@ -1,5 +1,9 @@
 # IntelliJ
 
+## Setting
+
+![image](https://user-images.githubusercontent.com/89640705/150999889-b0b949cf-463c-42c2-96fd-26dbbb31af8f.png)
+
 ## IntelliJ 단축키 (window)
 
 - Generate : Alt + Insert (Getter, Setter, Construct 등)
