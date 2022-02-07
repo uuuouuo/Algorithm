@@ -10,7 +10,7 @@
   ![image](https://user-images.githubusercontent.com/89640705/151112215-b99be765-fb70-4f5a-a00f-30e91bd12d0f.png)
   ![image](https://user-images.githubusercontent.com/89640705/151112238-bbeebc3f-445e-4721-a825-5eced2103c9d.png)
 
-- JPA 생산성
+- JPA 생산성  
   ![image](https://user-images.githubusercontent.com/89640705/151113473-bdbfc35b-860c-47f4-92e3-6b0f660a1e70.png)
 
   - 특히 update 유용
@@ -20,20 +20,6 @@
   1. 엔티티 매니저 팩토리는 하나만 생성해서 애플리케이션 전체에서 공유
   2. 엔티티 매니저는 쓰레드간 공유 X
   3. JPA의 모든 데이터 변경은 트랜잭션 안에서 실행 🎇
-
-- 예제 1)
-
-```java
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
-public class JpaMain {
-    public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
-        emf.createEntityManager();
-    }
-}
-```
 
 ## application.property
 
@@ -47,11 +33,14 @@ public class JpaMain {
   > spring.jpa.generate-ddl=true  
   > spring.jpa.show-sql=true  
   > spring.jpa.database=h2  
-  > spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+  > spring.jpa.database-platform=
 
 ## JPA dependency
 
 > implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+- 추가적 기본 세팅
+  >
 
 ## JPA Annotation
 
