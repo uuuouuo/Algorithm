@@ -12,10 +12,10 @@ static boolean visited[];
 		for (int i = start; i < N; i++) {
 
 			if(visited[i]){
-			result[idx] = input[i];
-			visited[i] = true;
-			perm(i + 1, idx + 1);
-			visited[i] = false;
+				result[idx] = input[i];
+				visited[i] = true;
+				perm(i + 1, idx + 1);
+				visited[i] = false;
 			}
 
 		}
