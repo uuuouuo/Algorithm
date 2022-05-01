@@ -19,7 +19,7 @@ class Solution {
     }
 
     static boolean isPrime(String num) {
-        long val = Long.parseLong(num); // long 타입으로 !
+        long val = Long.parseLong(num); // long 타입으로!
 
         if (val < 2)
             return false;
