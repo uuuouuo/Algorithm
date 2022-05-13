@@ -3,18 +3,18 @@
 ```java
 static int N, R, input[], result[];
 static boolean visited[];
-	private static void perm(int start, int idx) {
+	private static void perm(int idx) {
 		if(idx == R) {
 			// 문제에 따른 코드 구현
 			return;
 		}
 
-		for (int i = start; i < N; i++) {
+		for (int i = 0; i < N; i++) {
 
-			if(visited[i]){
+			if(!visited[i]){
 				result[idx] = input[i];
 				visited[i] = true;
-				perm(i + 1, idx + 1);
+				perm(idx + 1);
 				visited[i] = false;
 			}
 
