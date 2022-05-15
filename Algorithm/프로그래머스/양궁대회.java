@@ -1,68 +1,77 @@
-public class 양궁대회 {
-    // {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0} : 점수 형태
-    static int m = 11;
+class Solution {
+    static int[] result;
 
     public int[] solution(int n, int[] info) {
 
-        ryan = new int[m];
+        result = new int[11];
+        ryan = new int[11];
         max = 0;
-        min = 987654321;
+        go(n, info, 0, 0);
 
-        back(n, info, 0, 0);
-
+        if (max == 0)
+            return new int[] { -1 };
         return result;
     }
 
-    static int ryan[], max, min, result[] = { -1 };
+    static int[] ryan;
 
-    static void back(int n, int[] apeach, int start, int cnt) {
-
+    static void go(int n, int[] info, int start, int cnt) {
         if (cnt == n) {
-            int a = 0, r = 0;
-
-            // k 점수에 더 많이 맞추면 k점을 가져감
-            for (int i = 0; i < n; i++) {
-                int score = m - 1 - i;
-
-                if (ryan[i] == 0 && apeach[i] == 0)
-                    continue; // 둘다 한발도 못맞추면 둘다 0점
-
-                if (ryan[i] <= apeach[i])
-                    a += score; // 동일한 개수를 맞추거나 어피치가 더 높은 경우
-
-                if (ryan[i] > apeach[i])
-                    r += score; // 라이언이 더 높은 경우
-            }
-
-            if (r > a) { // 라이언이 이길 경우
-                int gap = Math.abs(r - a);
-                if (max < gap) { // 가장 큰 점수 차이일 경우
-                    max = gap;
-                    // for(int i = 0 ; i < m; i++) { // 결과값으로 저장
-                    // result[i] = ryan[i];
-                    // }
-                    result = ryan.clone();
-
-                }
-
-                if (max == gap) { // 가장 큰 점수 차이의 경우 중
-                    for (int i = 0; i < m; i++) {
-                        if (ryan[i] < result[i]) {
-                            result = ryan.clone();
-                        }
-                    }
-                }
-            }
+            // 비교해서 점수 구하기
+            getScore(info, ryan);
             return;
         }
 
-        for (int i = start; i < m; i++) { // 중복 조합
-            // m - i 점수판에 apeach[i] 개
+        // 중복 조합
+        for (int i = start; i < 11; i++) {
             ryan[i]++;
-            back(n, apeach, i, cnt + 1);
+            go(n, info, i, cnt + 1); // 중복가능하므로 index 그대로
             ryan[i]--;
         }
+    }
 
+    static int max;
+
+    static void getScore(int[] info, int[] ryan) {
+        int a = 0, r = 0;
+
+        // info[i] ryan[i] 화살 개수 비교
+        for (int i = 0; i < 11; i++) {
+            int score = 10 - i;
+
+            if (info[i] == 0 && ryan[i] == 0)
+                continue;
+            if (info[i] < ryan[i])
+                r += score;
+            else
+                a += score;
+        }
+
+        if (a < r)
+            getMax(r - a, ryan);
+    }
+
+    static void getMax(int gap, int[] ryan) {
+        if (max < gap) {
+            max = gap;
+            result = ryan.clone();
+        }
+
+        if (max == gap)
+            check(ryan);
+    }
+
+    static void check(int[] ryan) {
+        for (int i = 10; i >= 1; i--) {
+            if (ryan[i] == 0 && result[i] == 0
+                    || ryan[i] == result[i])
+                continue;
+            if (ryan[i] > result[i]) {
+                result = ryan.clone();
+                break;
+            } else
+                break;
+        }
     }
 
 }
