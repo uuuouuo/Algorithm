@@ -13,7 +13,7 @@ public class bj이건꼭풀어야해 {
     int n = Integer.parseInt(st.nextToken());
     int q = Integer.parseInt(st.nextToken());
     int[] input = new int[n];
-    int[] sum = new int[n+1];
+    int[] sum = new int[n + 1];
 
     st = new StringTokenizer(br.readLine());
     for (int i = 0; i < n; i++) {
@@ -22,15 +22,17 @@ public class bj이건꼭풀어야해 {
     Arrays.sort(input);
 
     for (int i = 1; i <= n; i++) {
-      if (i == 0) sum[i] = 0;
-      else sum[i] = input[i-1] + sum[i-1];
+      if (i == 0)
+        sum[i] = 0;
+      else
+        sum[i] = input[i - 1] + sum[i - 1];
     }
 
     for (int i = 0; i < q; i++) {
       st = new StringTokenizer(br.readLine());
-      int l = Integer.parseInt(st.nextToken())-1;
+      int l = Integer.parseInt(st.nextToken()) - 1;
       int r = Integer.parseInt(st.nextToken());
-      System.out.println(sum[r]-sum[l]);
+      System.out.println(sum[r] - sum[l]);
     }
   }
 }
