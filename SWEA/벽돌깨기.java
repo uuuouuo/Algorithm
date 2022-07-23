@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SWEA_벽돌깨기 {
+public class 벽돌깨기 {
 
     // r, c, 벽돌에 적힌 숫자, 남은 제거 숫자(벽돌 숫자 - 1)
     static class Info {

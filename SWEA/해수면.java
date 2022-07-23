@@ -8,7 +8,7 @@ import java.util.*;
 // 해당 칸은 true로
 // bfs끝나면 개수++
 // max 값 확인
-public class SWEA_해수면 {
+public class 해수면 {
 
     static Scanner sc;
     static int n, map[][], max, answer;

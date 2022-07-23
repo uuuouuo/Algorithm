@@ -1,5 +1,5 @@
 
-public class SWEA_기초DFS연습 {
+public class 기초DFS연습 {
 
     private int[][] node;
     private int[] cnt;

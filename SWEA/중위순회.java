@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class SWEA_중위순회 {
+public class 중위순회 {
 
     static class Node {
         String data;

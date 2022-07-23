@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.regex.*;
 
-public class SWEA_사칙연산유효성검사 {
+public class 사칙연산유효성검사 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
