@@ -1,9 +1,8 @@
 
-public class SWEA_기초DFS연습_UserSolution {
+public class SWEA_기초DFS연습 {
 
     private int[][] node;
     private int[] cnt;
-    private int[] stack;
 
     public void dfs_init(int N, int[][] path) {
         node = new int[100][5];
@@ -20,11 +19,12 @@ public class SWEA_기초DFS연습_UserSolution {
 
     public int dfs(int N) {
         int result = -1;
+
         boolean[] check = new boolean[100];
-        stack = new int[40];
+        int[] stack = new int[40];
+
         int top = -1;
         stack[++top] = N;
-
         while (top != -1) {
             int cur = stack[top--];
             if (check[cur])
