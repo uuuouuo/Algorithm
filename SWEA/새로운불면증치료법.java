@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Solution {
+public class 새로운불면증치료법 {
 
     public static void main(String[] args) throws IOException {
 

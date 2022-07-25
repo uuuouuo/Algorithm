@@ -8,7 +8,7 @@ class Node {
     }
 }
 
-public class 단일연결리스트_UserSolution {
+public class 단일연결리스트 {
 
     private final static int MAX_NODE = 10000;
 

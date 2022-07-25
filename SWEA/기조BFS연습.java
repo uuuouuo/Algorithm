@@ -1,5 +1,5 @@
 
-public class SWEA_기초BFS연습 {
+public class 기초BFS연습 {
 
     private int N;
     private int[][] arr;

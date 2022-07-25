@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class swea_무선충전2 {
+public class 무선충전 {
 
     // 충전 범위로 판단 -> 맵에 입력 x
     // 될 수 있는 모든 경우(중복 조합) 하나씩 비교해서 합했을 때 가장 큰값 더하기
