@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
-public class Solution {
+public class 보물상자비밀번호 {
 
     static int N, K;
     static String input[];
