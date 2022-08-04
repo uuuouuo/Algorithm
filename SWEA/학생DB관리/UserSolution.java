@@ -1,6 +1,8 @@
+package 학생DB관리;
+
 import java.util.*;
 
-public class 학생DB관리 {
+public class UserSolution {
 
 	static HashMap<Integer, HashMap<Character, List<Student>>> search; // 학년별, 성별
 	static HashMap<Integer, Student> students; // 전체
