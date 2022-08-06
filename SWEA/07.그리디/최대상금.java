@@ -46,6 +46,7 @@ public class 최대상금 {
             return;
         }
         // 하나씩 전부 변환
+        // if(numbers[i] <= numbers[j]) 제거
         for (int i = idx; i < size; i++) { // idx~
             for (int j = i + 1; j < size; j++) { // i+1~
                 int tmp = numbers[i];
