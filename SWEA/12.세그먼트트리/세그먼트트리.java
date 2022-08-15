@@ -47,7 +47,7 @@ public class 세그먼트트리 {
     // start: 시작 인덱스, end: 끝 인덱스
     // targetIdx: 수정하고자 하는 노드 인덱스
     // val: 수정할 값
-    static void updateTree(int[] input, int[] tree, int start, int end, int node, int targetIdx, int val) {
+    static void updateTree(int[] tree, int start, int end, int node, int targetIdx, int val) {
         // 범위 밖인 경우
         if (targetIdx < start || targetIdx > end)
             return;
@@ -59,7 +59,7 @@ public class 세그먼트트리 {
             return;
 
         int mid = (start + end) / 2;
-        updateTree(input, tree, start, mid, node * 2, targetIdx, val);
-        updateTree(input, tree, start, mid, node * 2, targetIdx, val);
+        updateTree(tree, start, mid, node * 2, targetIdx, val);
+        updateTree(tree, mid + 1, end, node * 2 + 1, targetIdx, val);
     }
 }
