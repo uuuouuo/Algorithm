@@ -1,7 +1,9 @@
+package 프로그래머스;
+
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution {
+class 후보키 {
     static int N, M, answer;
     static String[][] input;
     static List<String> list;

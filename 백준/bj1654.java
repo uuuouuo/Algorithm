@@ -1,5 +1,4 @@
-package 이분탐색;
-
+package 백준;
 import java.util.Scanner;
 
 /**

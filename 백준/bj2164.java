@@ -1,5 +1,4 @@
-package 자료구조;
-
+package 백준;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+class 이진변환반복하기 {
     public int[] solution(String s) {
 
         long length = s.length();

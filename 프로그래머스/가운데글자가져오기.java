@@ -1,3 +1,4 @@
+package 프로그래머스;
 class Solution {
     public String solution(String s) {
         String answer = "";

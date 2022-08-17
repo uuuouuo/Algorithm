@@ -1,3 +1,5 @@
+package 프로그래머스;
+
 import java.util.*;
 class Solution {
     static int N, M;

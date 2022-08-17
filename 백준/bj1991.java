@@ -1,5 +1,4 @@
-package 트리;
-
+package 백준;
 import java.util.Scanner;
 
 /** 트리 순회 - 정확히 이해 안돼 */

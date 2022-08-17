@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 오픈채팅방 {
   static class Result {
     String id, text;
 

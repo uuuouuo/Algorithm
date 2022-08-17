@@ -1,6 +1,7 @@
+package 백준;
 import java.util.*;
 
-public class bj수열 {
+public class bj2559 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

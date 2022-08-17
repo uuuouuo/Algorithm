@@ -1,4 +1,4 @@
-package 구현;
+package 백준;
 
 import java.util.Scanner;
 

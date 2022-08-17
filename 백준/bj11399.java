@@ -1,4 +1,4 @@
-package 그리디;
+package 백준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,10 +12,10 @@ public class bj11399 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
-		
+
 		Integer arr[] = new Integer[N];
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		
+
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
@@ -23,14 +23,14 @@ public class bj11399 {
 
 		int result = 0;
 		for (int i = 0; i < arr.length; i++) {
-			
+
 			int sum = 0;
 			for (int j = 0; j < i + 1; j++) {
 				sum += arr[j];
 			}
 			result += sum;
 		}
-		
+
 		System.out.println(result);
 
 	}

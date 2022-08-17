@@ -1,5 +1,4 @@
-package 그래프탐색;
-
+package 백준;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;

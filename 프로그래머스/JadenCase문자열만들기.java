@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class JadenCase문자열만들기 {
     public String solution(String s) {
 
         String answer = "";

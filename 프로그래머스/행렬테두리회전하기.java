@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+class 행렬테두리회전하기 {
     static int[][] arr;
     public List<Integer> solution(int rows, int columns, int[][] queries) {
         

@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 타겟넘버 {
     static int N, answer;
 
     public int solution(int[] numbers, int target) {

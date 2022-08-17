@@ -1,5 +1,4 @@
-package 이진트리;
-
+package 백준;
 import java.io.*;
 import java.util.*;
 

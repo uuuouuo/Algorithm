@@ -1,4 +1,4 @@
-package 수학;
+package 백준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -26,13 +26,13 @@ public class bj1059 {
 		// n보다 크면 -> A: n ~ B: 큰수 -> 큰수 개수
 
 		for (int i = 0; i < L; i++) {
-			if(S[i] == n) {
+			if (S[i] == n) {
 				System.out.println(0);
 				break;
 			}
 
-			if(n < S[0]) {
-				// 1 ~	n
+			if (n < S[0]) {
+				// 1 ~ n
 				int low = n - 1;
 				// n ~ S[0]
 				int high = S[0] - n - 1;
@@ -43,8 +43,8 @@ public class bj1059 {
 				System.exit(0);
 			}
 
-			if(S[i] < n && n < S[i + 1]) {
-				// S[i] ~	n
+			if (S[i] < n && n < S[i + 1]) {
+				// S[i] ~ n
 				int low = n - S[i] - 1;
 				// n ~ S[i + 1]
 				int high = S[i + 1] - n - 1;

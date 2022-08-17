@@ -1,6 +1,8 @@
+package 백준;
+
 import java.util.*;
 
-public class 연구소 {
+public class bj14502 {
 
     static class Point {
         int r, c;

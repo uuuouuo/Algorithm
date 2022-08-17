@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+class 파일명정렬 {
     public String[] solution(String[] files) {
         // 1. 헤드 사전순 Object.compareTo(_) -> 모두 소문자로 치환 toLowerCase()
         // 2. 헤드가 같을 경우 숫자 사전순 -> int로 치환하고 비교 / 5자 이하 체크

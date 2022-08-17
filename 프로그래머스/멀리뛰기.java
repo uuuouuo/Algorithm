@@ -1,3 +1,5 @@
+package 프로그래머스;
+
 class Solution {
     // 이걸보고 어떻게 DP라는 걸 알죠?..
     // n = 1 -> 1, (1)

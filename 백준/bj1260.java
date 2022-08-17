@@ -1,4 +1,4 @@
-package 그래프탐색;
+package 백준;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,6 +16,7 @@ public class bj1260 {
 	static int N, M, V;
 	static List<Integer> list[];
 	static boolean visited[];
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -27,56 +28,57 @@ public class bj1260 {
 		for (int i = 0; i < N + 1; i++) {
 			list[i] = new ArrayList<Integer>();
 		}
-		
+
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine());
 			int from = Integer.parseInt(st.nextToken());
 			int to = Integer.parseInt(st.nextToken());
-			
+
 			list[from].add(to);
 			list[to].add(from);
 		}
-		
+
 		for (int i = 1; i < N + 1; i++) {
-			Collections.sort(list[i]); 
+			Collections.sort(list[i]);
 		}
-				
+
 		visited = new boolean[N + 1];
 		dfs(V);
 		System.out.println();
 		bfs(V);
 
-		
 	}
-	
+
 	private static void dfs(int start) {
 		System.out.print(start + " ");
 		visited[start] = true;
-		
-		for(int next : list[start]){
-			if(visited[next]) continue;
+
+		for (int next : list[start]) {
+			if (visited[next])
+				continue;
 			dfs(next);
 		}
-		
+
 	}
-	
+
 	private static void bfs(int start) {
-		Arrays.fill(visited, false);		
-		Queue<Integer> q = new LinkedList<Integer>();	
+		Arrays.fill(visited, false);
+		Queue<Integer> q = new LinkedList<Integer>();
 		q.add(start);
 		visited[start] = true;
-		
-		while(!q.isEmpty()) {
+
+		while (!q.isEmpty()) {
 			int cur = q.poll();
 			System.out.print(cur + " ");
-			
-			for(int next : list[cur]) {
-				if(visited[next]) continue;
+
+			for (int next : list[cur]) {
+				if (visited[next])
+					continue;
 				visited[next] = true;
-				q.add(next);				
+				q.add(next);
 			}
 		}
-		
+
 	}
 
 }

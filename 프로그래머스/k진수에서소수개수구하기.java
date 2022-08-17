@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class k진수에서소수개수구하기 {
     public int solution(int n, int k) {
         int answer = 0;
         // 진수 변환 -> long 타입으로 !

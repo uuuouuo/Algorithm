@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 행렬의곱셈 {
     public int[][] solution(int[][] arr1, int[][] arr2) {
         int[][] answer = new int[arr1.length][arr2[0].length];
         // arr1[0][0,1,2] * arr2[0,1,2][0] 

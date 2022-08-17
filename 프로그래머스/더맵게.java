@@ -1,3 +1,5 @@
+package 프로그래머스;
+
 import java.util.*;
 class Solution {
     // 스코빌 지수가 가장 낮은 두 개의 음식 섞기

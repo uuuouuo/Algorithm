@@ -1,3 +1,5 @@
+package 프로그래머스;
+
 public class 신규아이디추천 {
     class Solution {
 

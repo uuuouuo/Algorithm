@@ -1,6 +1,8 @@
+package 백준;
+
 import java.util.*;
 
-public class Main {
+public class bj1012 {
 
     static int N, M, K, map[][], answer;
     static Queue<Point> q;

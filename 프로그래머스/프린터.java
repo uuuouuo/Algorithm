@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 프린터 {
 
     static class Info {
         int idx, num;

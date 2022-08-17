@@ -1,3 +1,5 @@
+package 프로그래머스;
+
 class Solution {
     boolean solution(String s) {
         int pCnt = 0;

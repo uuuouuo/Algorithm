@@ -1,5 +1,4 @@
-package 그래프탐색;
-
+package 백준;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

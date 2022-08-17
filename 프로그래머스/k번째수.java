@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class k번째수 {
     public List<Integer> solution(int[] array, int[][] commands) {
         List<Integer> answer = new ArrayList<>();
         for (int[] c : commands) {

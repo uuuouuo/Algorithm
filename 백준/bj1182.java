@@ -1,4 +1,4 @@
-package 순열_조합_부분집합;
+package 백준;
 
 import java.util.Scanner;
 
