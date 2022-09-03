@@ -18,7 +18,3 @@ class Solution {
             return false;
     }
 }
-
-public class 올바른괄호 {
-
-}
