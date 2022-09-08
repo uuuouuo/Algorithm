@@ -1,48 +1,3 @@
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
 class Solution {
     public int solution(int N, int[][] road, int K) { // N: 마을 개수, K: 최소 시간
         int answer = 0;
@@ -51,7 +6,8 @@ class Solution {
         // 무한대로 초기화
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= N; j++) {
-                if(i == j) continue;
+                if (i == j)
+                    continue;
                 times[i][j] = 500001;
             }
         }
@@ -62,7 +18,8 @@ class Solution {
             int b = road[i][1];
             int c = road[i][2];
 
-            if(times[a][b] < c) continue;
+            if (times[a][b] < c)
+                continue;
             times[a][b] = times[b][a] = c;
         }
 
@@ -72,17 +29,19 @@ class Solution {
             // k노드를 거쳐 노드 i에서 j로 가는 경우.
             for (int i = 1; i <= N; i++) {
                 for (int j = 1; j <= N; j++) {
-                    if(i == j) continue;
+                    if (i == j)
+                        continue;
                     // k번째 노드를 거쳐가는 비용이 기존 비용보다 더 작은 경우 갱신
                     // 또는 연결이 안되어있던 경우(INF) 연결 비용 갱신
-                    if(times[i][j] > times[i][k] + times[k][j])
+                    if (times[i][j] > times[i][k] + times[k][j])
                         times[i][j] = times[i][k] + times[k][j];
                 }
             }
         }
 
         for (int i = 1; i <= N; i++) {
-            if(times[1][i] <= K) answer++;
+            if (times[1][i] <= K)
+                answer++;
         }
         return answer;
     }
