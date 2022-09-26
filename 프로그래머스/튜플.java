@@ -22,16 +22,10 @@ class Solution {
             }
         }
 
-        // for(int i=0; i<arr.length; i++)
-        // System.out.println(cnt[i]);
-
         int[] answer = new int[n];
         map.forEach((k, v) -> {
             answer[n - cnt[v]] = k;
         });
-
-        // for(int i=0; i<n; i++)
-        // System.out.println(answer[i]);
 
         return answer;
     }
