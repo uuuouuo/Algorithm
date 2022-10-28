@@ -19,7 +19,7 @@ public class bj3085 { // 상근이가 먹을 수 있는 사탕의 최대 개수
         check(map, n);
         // 오른쪽, 아래 다른지 확인 >> 다른면 체인지
         // 맨 마지막 행은 확인 x
-        // 연속하는 행 or 열 확인
+        // 연속하는 행 or 열 확인 >>>>>>> 줄에서 다른색이 나오면 다시 개수 확인해야하는데 끝내버려서 삽질
         // n이 최대라면 끝
         answer = 0;
         for (int i = 0; i < n - 1; i++) {
@@ -45,7 +45,6 @@ public class bj3085 { // 상근이가 먹을 수 있는 사탕의 최대 개수
     }
 
     static void change(char[][] map, int n, int r, int c, int nr, int nc) {
-        // System.out.println(r+" "+c+" "+nr+" "+nc);
         char[][] tmp = new char[n][n];
         for (int i = 0; i < n; i++)
             tmp[i] = Arrays.copyOf(map[i], n);
@@ -59,13 +58,6 @@ public class bj3085 { // 상근이가 먹을 수 있는 사탕의 최대 개수
     static int answer;
 
     static void check(char[][] tmp, int n) {
-        // for(int i=0; i<n; i++) {
-        // for(int j=0; j<n; j++) {
-        // System.out.print(tmp[i][j] + " ");
-        // }
-        // System.out.println();
-        // }
-
         for (int i = 0; i < n; i++) {
             // 00 01 02 03
             // 10 11 12 13
