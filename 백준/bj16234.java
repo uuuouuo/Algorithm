@@ -5,7 +5,7 @@ import java.util.*;
 
 // 처음에 모든 나라는 한번만 돌면서 찾을때마다 1일씩 올리는 이상한 로직 구현
 // 1일이 모든 나라를 도는 것이였고, 모든 나라를 돌고 이동이 없다면 끝
-public class bj16234 {
+public class bj16234 { // 인구이동
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
