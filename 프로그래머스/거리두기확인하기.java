@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 거리두기확인하기 {
 
     static Queue<Point> q;
 

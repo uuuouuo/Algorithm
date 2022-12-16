@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 문자열압축 {
     public int solution(String s) {
         int size = s.length();
         int answer = size;

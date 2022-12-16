@@ -1,7 +1,7 @@
 package 프로그래머스;
 
 import java.util.*;
-class Solution {
+class 게임맵최단거리 {
     static int N, M;
     public int solution(int[][] maps) {
         N = maps.length;

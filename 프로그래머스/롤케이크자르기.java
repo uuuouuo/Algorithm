@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 롤케이크자르기 {
     public int solution(int[] topping) {        
         int answer = 0; // 토핑 종류가 같게 되는 모든 경우의 수
         Map<Integer, Integer> bro = new HashMap<>();

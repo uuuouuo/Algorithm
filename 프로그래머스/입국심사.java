@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution { // 파라메터서치 (이분탐색 : O(logN)) 
+class 입국심사 { // 파라메터서치 (이분탐색 : O(logN))
     public long solution(int n, int[] times) {
         Arrays.sort(times);
         

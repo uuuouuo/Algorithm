@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 가장큰수 {
     static int N;
     static String[] input;
 

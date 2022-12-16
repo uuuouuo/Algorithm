@@ -1,8 +1,6 @@
 package 프로그래머스;
 
-import java.util.*;
-
-class Solution {
+class 다음큰숫자 {
     public int solution(int n) {
 
         int cnt = Integer.bitCount(n);

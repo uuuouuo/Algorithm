@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 다리를지나는트럭 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         int n = bridge_length;
         int w = weight;

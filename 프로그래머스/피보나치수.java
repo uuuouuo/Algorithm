@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 피보나치수 {
     public int solution(int n) {
         int answer = 0;
         int[] arr = new int[n + 1];

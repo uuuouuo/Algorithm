@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 없는숫자더하기 {
     public int solution(int[] numbers) {
         int answer = 0;
         boolean[] check = new boolean[10];

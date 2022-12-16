@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 크레인인형뽑기게임 {
 
     static int[][] map;
     static int answer;

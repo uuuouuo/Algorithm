@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 다트게임 {
     public int solution(String dartResult) {
 
         List<String> list = new ArrayList<>();

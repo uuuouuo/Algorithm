@@ -1,7 +1,8 @@
 package 프로그래머스;
 
 import java.util.*;
-class Solution {
+
+class 소수찾기 {
     static int answer, N;
     static List<Integer> list;
     static String[] input;

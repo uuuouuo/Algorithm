@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 모의고사 {
     static int[] one = { 1, 2, 3, 4, 5 };
     static int[] two = { 2, 1, 2, 3, 2, 4, 2, 5 };
     static int[] three = { 3, 3, 1, 1, 2, 2, 4, 4, 5, 5 };

@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 양궁대회 {
     static int[] result;
 
     public int[] solution(int n, int[] info) {

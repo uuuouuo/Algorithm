@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 카펫 {
     // 12 -> 1, 2, 3, 4, 6, 12
     public int[] solution(int brown, int yellow) {
         int[] ans = new int[2];

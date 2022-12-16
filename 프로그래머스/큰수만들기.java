@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 큰수만들기 {
     // 투포인터
     public String solution(String number, int k) {
         StringBuilder sb = new StringBuilder();

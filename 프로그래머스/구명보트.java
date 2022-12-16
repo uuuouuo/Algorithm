@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+class 구명보트 {
     public int solution(int[] people, int limit) {
         Arrays.sort(people);
         // for(int p : people)

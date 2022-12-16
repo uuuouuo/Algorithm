@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 뉴스클러스터링 {
     public int solution(String str1, String str2) {
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();

@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 택배상자 {
     public int solution(int[] order) {
         int answer = 0;
         Stack<Integer> st = new Stack<>();

@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class 숫자게임 {
     static int answer;
 
     public int solution(int[] A, int[] B) {

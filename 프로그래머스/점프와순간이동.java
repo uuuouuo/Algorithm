@@ -1,6 +1,6 @@
-import java.util.*;
+package 프로그래머스;
 
-public class Solution {
+public class 점프와순간이동 {
     public int solution(int n) {
         int ans = 0;
 

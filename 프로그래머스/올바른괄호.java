@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 올바른괄호 {
     boolean solution(String s) {
         int n = s.length();
         int tmp = 0;

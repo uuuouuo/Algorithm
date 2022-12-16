@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 배달 {
     public int solution(int N, int[][] road, int K) { // N: 마을 개수, K: 최소 시간
         int answer = 0;
         int[][] times = new int[N + 1][N + 1];

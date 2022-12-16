@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class 섬연결하기 {
     // 최소 신장 트리 -> 사이클 형성 x
     // 간선 수 - 1 일때 최소비용
     // 최소비용 알고리즘 : 크루스칼, 프림 알고리즘

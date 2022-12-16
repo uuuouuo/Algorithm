@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 압축 {
 
     static int idx;
     static HashMap<String, Integer> dic;

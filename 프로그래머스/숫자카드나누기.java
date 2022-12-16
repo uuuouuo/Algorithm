@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 숫자카드나누기 {
     static int answer;
     public int solution(int[] arrayA, int[] arrayB) {
         answer = 0;

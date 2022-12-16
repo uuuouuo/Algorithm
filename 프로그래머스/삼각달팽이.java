@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 삼각달팽이 {
     public int[] solution(int n) {
         int total = n * (n + 1) / 2;
         int[] answer = new int[total];

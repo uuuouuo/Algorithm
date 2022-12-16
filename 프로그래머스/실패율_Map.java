@@ -3,7 +3,7 @@ package 프로그래머스;
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution {
+class 실패율_Map {
     public int[] solution(int N, int[] stages) {
         // N: 전체 스테이지
         // stages: 유저별 진행중인 스테이지

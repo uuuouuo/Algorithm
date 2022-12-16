@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 모음사전 {
     static int ans;
     static boolean isOk;
     static String[] str = { "A", "E", "I", "O", "U" };

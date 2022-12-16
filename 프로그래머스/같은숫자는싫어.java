@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solution {
+public class 같은숫자는싫어 {
     public List<Integer> solution(int[] arr) {
         List<Integer> answer = new ArrayList<>();
         int n = arr.length;

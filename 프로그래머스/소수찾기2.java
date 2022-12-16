@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 소수찾기2 {
     static int answer;
 
     public int solution(int n) {

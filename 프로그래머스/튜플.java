@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 튜플 {
     public int[] solution(String s) {
         s = s.substring(2, s.length() - 2);
         s = s.replace("},{", " ");

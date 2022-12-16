@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 // 문제 대충 봄.. (n의 범위!)
-class Solution {
+class n진수게임 {
     public String solution(int n, int t, int m, int p) {
         StringBuilder sb = new StringBuilder();
         int max = t * m; // t * m => 이만큼 길이까지 구하기

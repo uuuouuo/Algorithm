@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 위장 {
 
     static HashMap<String, List<String>> map;
     public int solution(String[][] clothes) {

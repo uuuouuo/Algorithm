@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 실패율_List {
 
     static class Stage implements Comparable<Stage> {
         int stageN;

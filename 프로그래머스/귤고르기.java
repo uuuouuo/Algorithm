@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 귤고르기 {
     public int solution(int k, int[] tangerine) {
         // 완탐 절대 안돼
         // 조금만 생각하면 간단히 풀 수 있는 문제...쒯

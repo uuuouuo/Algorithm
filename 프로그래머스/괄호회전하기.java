@@ -1,7 +1,7 @@
 package 프로그래머스;
 
 import java.util.*;
-class Solution {
+class 괄호회전하기 {
     public int solution(String s) {
         int answer = 0;
         // 회전 방법: substring

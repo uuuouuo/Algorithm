@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*; // import 실수
 
-class Solution {
+class 순위검색 {
 
     // static 실수
     static Map<String, List<Integer>> map; // 조건 String, 점수 list

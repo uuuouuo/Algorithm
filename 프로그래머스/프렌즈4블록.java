@@ -1,5 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+
+class 프렌즈4블록 {
     static char[][] b;
     static int answer;
     public int solution(int m, int n, String[] board) {

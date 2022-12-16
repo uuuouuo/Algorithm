@@ -1,7 +1,6 @@
 package 프로그래머스;
 
-import java.util.*;
-class Solution {
+class 소수만들기 {
     
     static int res[], answer;
     public int solution(int[] nums) {

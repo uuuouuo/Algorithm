@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 괄호변환 {
     public String solution(String p) {
         String answer = "";
 

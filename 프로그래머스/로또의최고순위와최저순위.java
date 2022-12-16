@@ -1,8 +1,6 @@
 package 프로그래머스;
 
-import java.util.*;
-
-class Solution {
+class 로또의최고순위와최저순위 {
     static int ranking[], cnt, zero;
 
     public int[] solution(int[] lottos, int[] win_nums) {

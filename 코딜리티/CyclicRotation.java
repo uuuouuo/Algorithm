@@ -1,6 +1,6 @@
 package 코딜리티;
 
-class Solution {
+class CyclicRotation {
     public int[] solution(int[] A, int K) {
         for (int i = 0; i < K; i++) {
             swap(A);

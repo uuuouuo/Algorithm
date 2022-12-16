@@ -1,7 +1,7 @@
 package 프로그래머스;
 
 import java.util.*;
-class Solution {
+class 기능개발 {
     static int days[], N;
     static List<Integer> answer;
     public List<Integer> solution(int[] progresses, int[] speeds) {

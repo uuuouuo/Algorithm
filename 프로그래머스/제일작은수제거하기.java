@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 제일작은수제거하기 {
     public int[] solution(int[] arr) {
         if (arr.length == 1)
             return new int[] { -1 };

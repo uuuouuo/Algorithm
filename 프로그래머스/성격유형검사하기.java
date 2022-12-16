@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class 성격유형검사하기 {
     public String solution(String[] survey, int[] choices) {
         String answer = "";
         String[] type = { "R", "T", "C", "F", "J", "M", "A", "N" };

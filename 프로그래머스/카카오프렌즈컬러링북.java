@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 카카오프렌즈컬러링북 {
     static class Info {
         int r, c, n;
 

@@ -1,7 +1,8 @@
 package 프로그래머스;
 
 import java.util.*;
-class Solution {
+
+class 더맵게 {
     // 스코빌 지수가 가장 낮은 두 개의 음식 섞기
     // 우선순이 큐 -> 오름차순으로 정렬해줘서 작은 수 먼저 꺼낼 수 있음
     public int solution(int[] scoville, int K) {

@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 주차요금계산 {
 
     public List<Integer> solution(int[] fees, String[] records) {
 

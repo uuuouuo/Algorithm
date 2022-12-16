@@ -1,5 +1,6 @@
+package 프로그래머스;
 
-class Solution {
+class 멀쩡한사각형 {
     // 1. 최대 공약수 구하기
     // 2. 공식에 넣어 구하기
     public long solution(int w, int h) {

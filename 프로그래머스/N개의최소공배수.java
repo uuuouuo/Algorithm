@@ -1,4 +1,4 @@
-class Solution {
+class N개의최소공배수 {
     // 유클리드 호제법
     public int solution(int[] arr) {
         int ans = arr[0];

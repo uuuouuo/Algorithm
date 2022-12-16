@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 숫자블록 {
     public int[] solution(long begin, long end) {
         // 에라토네스의 체 응용
         int n = (int) (end - begin + 1);

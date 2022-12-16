@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 혼자놀기의달인 {
     public int solution(int[] cards) {
         int answer = 0;
         boolean[] check;

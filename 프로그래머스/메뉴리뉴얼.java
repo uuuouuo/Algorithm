@@ -3,7 +3,7 @@ package 프로그래머스;
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution {
+class 메뉴리뉴얼 {
     public List<String> solution(String[] orders, int[] course) {
 
         // 각 손님의 코스 조합 구해서 map에 저장

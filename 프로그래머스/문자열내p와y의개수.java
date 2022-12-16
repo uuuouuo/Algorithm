@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 문자열내p와y의개수 {
     boolean solution(String s) {
         int pCnt = 0;
         int yCnt = 0;

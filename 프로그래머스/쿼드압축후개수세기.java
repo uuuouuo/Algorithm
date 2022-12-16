@@ -1,6 +1,6 @@
 package 프로그래머스;
 
-class Solution {
+class 쿼드압축후개수세기 {
 
     static int one, zero;
 

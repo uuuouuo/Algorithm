@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 단어변환 {
     static int answer;
 
     public int solution(String begin, String target, String[] words) {

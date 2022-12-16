@@ -7,7 +7,7 @@ package 코딜리티;
 // System.out.println("this is a debug message");
 import java.util.*;
 
-class Solution {
+class OddOccurrencesInArray {
     static int answer;
 
     public int solution(int[] A) {

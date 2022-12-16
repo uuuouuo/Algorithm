@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 숫자문자열과영단어 {
 
     static class Info {
         String str;

@@ -1,6 +1,9 @@
-import java.util.*;
+package 프로그래머스;
 
-class Solution {
+import java.util.ArrayList;
+import java.util.List;
+
+class _3진법뒤집기 {
     public int solution(int n) {
 
         // 45 / 3 - 0

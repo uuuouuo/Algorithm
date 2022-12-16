@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 수식최대화 {
 
     static long answer;
     static boolean[] visited;

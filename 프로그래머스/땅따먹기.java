@@ -1,5 +1,7 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+class 땅따먹기 {
     int solution(int[][] land) {
         int n = land.length;
         for(int i = 1; i < n; i++) {

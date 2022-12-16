@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class 연속부분수열합의개수 {
     public int solution(int[] elements) {
         int[] arr = new int[elements.length * 2]; // 더하기 편하도록 2배로 늘리기
         for (int i = 0; i < elements.length; i++) {

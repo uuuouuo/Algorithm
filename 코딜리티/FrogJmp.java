@@ -1,6 +1,6 @@
 package 코딜리티;
 
-class Solution {
+class FrogJmp {
     public int solution(int X, int Y, int D) {
         int cnt = 0;
         int tmp = 0;

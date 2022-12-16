@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 방금그곡 {
     static class Info {
         int time;
         String title, melody;

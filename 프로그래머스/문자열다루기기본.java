@@ -1,8 +1,6 @@
 package 프로그래머스;
 
-import java.util.*;
-
-class Solution {
+class 문자열다루기기본 {
     public boolean solution(String s) {
         boolean answer = false;
         // s 길이 4 or 6

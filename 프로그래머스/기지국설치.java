@@ -1,4 +1,6 @@
-class Solution {
+package 프로그래머스;
+
+class 기지국설치 {
     public int solution(int n, int[] stations, int w) {
         int answer = 0;
 

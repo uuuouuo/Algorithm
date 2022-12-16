@@ -1,5 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
-class Solution {
+
+class 스킬트리 {
     public int solution(String skill, String[] skill_trees) {
         // map으로 스킬 순서 등록 -> 개수 세기
         // containsKey -> 있으면 cur(1 부터 시작)으로 현재 단계 맞는지 확인

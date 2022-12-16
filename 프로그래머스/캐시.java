@@ -3,7 +3,7 @@ package 프로그래머스;
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution {
+class 캐시 {
     // LRU: 가장 오래된 페이지 교체
     // Hit: 순서 교체
     // Miss: 캐시 갱신

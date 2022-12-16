@@ -3,7 +3,7 @@ package 프로그래머스;
 import java.util.*;
 import java.util.Map.Entry;
 
-class Solution {
+class 완주하지못한선수 {
     public String solution(String[] participant, String[] completion) {
 
         HashMap<String, Integer> map = new HashMap<>();

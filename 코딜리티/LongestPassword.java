@@ -6,7 +6,7 @@ package 코딜리티;
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
 
-class Solution {
+class LongestPassword {
     public int solution(String S) {
         int answer = -1;
         String[] arr = S.split(" ");

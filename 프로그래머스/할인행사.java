@@ -1,6 +1,8 @@
+package 프로그래머스;
+
 import java.util.*;
 
-class Solution {
+class 할인행사 {
     public int solution(String[] want, int[] number, String[] discount) {
         int answer = 0;
         for (int i = 0; i < discount.length - 9; i++) {

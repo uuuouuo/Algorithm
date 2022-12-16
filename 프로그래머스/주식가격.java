@@ -2,7 +2,7 @@ package 프로그래머스;
 
 import java.util.*;
 
-class Solution {
+class 주식가격 {
     public int[] solution(int[] prices) {
         
         int n = prices.length;
