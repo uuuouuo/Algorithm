@@ -1,6 +1,6 @@
 package 코딜리티;
 
-class Solution {
+class BinaryGap {
     public int solution(int N) {
         String s = Integer.toString(N, 2);
         int answer = 0;
@@ -16,7 +16,7 @@ class Solution {
                     answer = gap;
                 pre = i;
             }
-            return answer;
         }
+        return answer;
     }
 }
