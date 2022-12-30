@@ -52,7 +52,7 @@ public class bj1145 { // 적어도 대부분의 배수
 
         int tmp;
         while(small != 0) {
-            tmp = big%small;
+            tmp = big % small;
             big = small;
             small = tmp;
         }
