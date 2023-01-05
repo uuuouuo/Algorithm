@@ -6,21 +6,21 @@ import java.util.*;
 /**
  * 다이나믹 프로그래밍 방법 (재귀도 가능)
  */
-public class bj20167 { // 꿈틀꿈틀 호석 애벌레 - 기능성
+public class bj20167_1 { // 꿈틀꿈틀 호석 애벌레 - 기능성
 
     static int N, K, A[], E[];
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+            StringTokenizer st = new StringTokenizer(br.readLine());
 
-        N = Integer.parseInt(st.nextToken());
-        K = Integer.parseInt(st.nextToken());
-        A = new int[N+1];
-        E = new int[N+1];
+            N = Integer.parseInt(st.nextToken());
+            K = Integer.parseInt(st.nextToken());
+            A = new int[N+1];
+            E = new int[N+1];
 
-        st = new StringTokenizer(br.readLine());
-        for (int i = 1; i <= N; i++) {
-            A[i] = Integer.parseInt(st.nextToken());
+            st = new StringTokenizer(br.readLine());
+            for (int i = 1; i <= N; i++) {
+                A[i] = Integer.parseInt(st.nextToken());
         }
 
         go();
