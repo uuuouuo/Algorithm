@@ -37,8 +37,8 @@ public class bj20168 { // 골목 대장 호석
             if(answer > max) answer = max;
             return;
         }
-        /* 해당 교차로 방문 체크*/
-        check[node] = true;
+//        /* 해당 교차로 방문 체크*/
+//        check[node] = true;
 
         for (int next = 1; next <= N; next++) {
             /*
@@ -50,8 +50,13 @@ public class bj20168 { // 골목 대장 호석
             if(check[next] || adjArr[node][next] == 0 // 실수 2. &&
                 || cost - adjArr[node][next] < 0) continue; // 실수 3. 지정된 비용 체크 안함
 
+
+            check[next] = true;
+
             /* 갈 수 있는 교차로(next)의 수금액 빼고 이동 */
             go(next, Math.max(max, adjArr[node][next]), cost - adjArr[node][next], check); // 실수 4. max 값을 노드 번호로 함
+
+            check[next] = false;
         }
     }
 
