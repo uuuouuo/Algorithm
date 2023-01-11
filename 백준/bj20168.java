@@ -37,7 +37,9 @@ public class bj20168 { // 골목 대장 호석
             if(answer > max) answer = max;
             return;
         }
-//        /* 해당 교차로 방문 체크*/
+
+        /** 배열은 Call by reference 의 경우이기 때문에
+         * 나중에 false로 바꿔주는 처리를 해주어야 함 */
 //        check[node] = true;
 
         for (int next = 1; next <= N; next++) {
