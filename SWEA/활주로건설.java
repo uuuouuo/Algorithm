@@ -52,11 +52,13 @@ public class 활주로건설 {
                 if(pre < cur) {
                     // 이미 설치되있거나
                     // 설치 가능한 길이보다 경사로 길이가 더 길면 false
-                    if(isSet[row-1] || len < X) return false;
-                        // 설치 가능하면
+                    if(len < X) return false;
+                    // 설치 가능하면
                     else {
-                        for (int i = 1; i <= X; i++)
-                            isSet[row-i] = true;
+                        for (int i = 1; i <= X; i++) {
+                            if(isSet[row - i]) return false; /*실수. 직전만 경사로 있는지 파악하고 그 뒤는 확인도 안함*/
+                            else isSet[row - i] = true;
+                        }
                     }
                     len = 1;
                     pre = cur;
@@ -75,7 +77,7 @@ public class 활주로건설 {
                     }
 
                     // 설치하기
-                    for (int i = 1; i <= X; i++)
+                    for (int i = 0; i < X; i++) /*실수. 현재 위치부터 설치해야하는데 그 전부터 설치함*/
                         isSet[row-i] = true;
                     len = 0;
                 }
@@ -103,13 +105,15 @@ public class 활주로건설 {
                 if(Math.abs(cur - pre) > 1) return false;
                 // 이전보다 높을 때 : len 으로 설치되는지 확인가능
                 if(pre < cur) {
-                    // 이미 설치되있거나
                     // 설치 가능한 길이보다 경사로 길이가 더 길면 false
-                    if(isSet[col-1] || len < X) return false;
+                    if(len < X) return false;
                     // 설치 가능하면
                     else {
-                        for (int i = 1; i <= X; i++)
-                            isSet[col-i] = true;
+                        for (int i = 1; i <= X; i++) {
+                            // 이미 설치되있으면 false
+                            if(isSet[col - i]) return false;
+                            else isSet[col - i] = true;
+                        }
                     }
                     len = 1;
                     pre = cur;
@@ -128,7 +132,7 @@ public class 활주로건설 {
                     }
 
                     // 설치하기
-                    for (int i = 1; i <= X; i++)
+                    for (int i = 0; i < X; i++)
                         isSet[col-i] = true;
                     len = 1;
                 }
