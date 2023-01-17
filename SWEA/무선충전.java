@@ -1,97 +1,115 @@
+package SWEA;
+
 import java.util.*;
+import java.io.*;
 
 public class 무선충전 {
 
-    // 충전 범위로 판단 -> 맵에 입력 x
-    // 될 수 있는 모든 경우(중복 조합) 하나씩 비교해서 합했을 때 가장 큰값 더하기
-    // -> 왜 따로 하려했을까
-    // -> 그래봤자 경우의 수 6
-    static class Info {
-        int x, y, range, power;
+    static StringTokenizer st;
+    static int T, M, N;
+    static int A[], B[], map[][], BC[], idx;
+    static int rA = 0, cA = 0, rB = 9, cB = 9;
+    static Map<Integer, List<Integer>> O;
 
-        public Info(int x, int y, int range, int power) {
-            this.x = x;
-            this.y = y;
-            this.range = range;
-            this.power = power;
-        }
-    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        T = Integer.parseInt(br.readLine());
 
-    static int M, A, dirA[], dirB[], answer; // 이동 시간, BC 개수
-    static Info[] BC;
+        for (int tc = 0; tc < T; tc++) {
+            st = new StringTokenizer(br.readLine());
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        for (int t = 1; t <= T; t++) {
-            M = sc.nextInt();
-            A = sc.nextInt();
+            M = Integer.parseInt(st.nextToken()); // 총 이동 시간
+            N = Integer.parseInt(st.nextToken()); // BC 개수
 
-            dirA = new int[M + 1];
-            for (int i = 1; i <= M; i++)
-                dirA[i] = sc.nextInt();
+            A = new int[M+1];
+            B = new int[M+1];
+            map = new int[10][10];
+            BC = new int[N+1];
+            O = new HashMap<>();
 
-            dirB = new int[M + 1];
-            for (int i = 1; i <= M; i++)
-                dirB[i] = sc.nextInt();
-
-            BC = new Info[A];
-            for (int i = 0; i < A; i++) {
-                int x = sc.nextInt();
-                int y = sc.nextInt();
-                int range = sc.nextInt();
-                int power = sc.nextInt();
-                BC[i] = new Info(x, y, range, power);
+            st = new StringTokenizer(br.readLine());
+            for (int i = 0; i < M; i++) {
+                A[i] = Integer.parseInt(st.nextToken());
+            }
+            st = new StringTokenizer(br.readLine());
+            for (int i = 0; i < M; i++) {
+                B[i] =Integer.parseInt(st.nextToken());
             }
 
-            answer = 0;
-            go();
-            System.out.println("#" + t + " " + answer);
-        }
+            idx = 0;
+            int r, c, range, charge;
+            for (int i = 1; i <= N; i++) {
+                st = new StringTokenizer(br.readLine());
 
+                c = Integer.parseInt(st.nextToken())-1;
+                r = Integer.parseInt(st.nextToken())-1;
+                range = Integer.parseInt(st.nextToken());
+                charge = Integer.parseInt(st.nextToken());
+
+                BC[i] = charge;
+                set(r, c, range, i);
+            }
+
+//            for (int i = 0; i < 10; i++) {
+//                for (int j = 0; j < 10; j++) {
+//                    System.out.print(map[i][j]+" ");
+//                }
+//                System.out.println();
+//            }
+            for (int i = 1; i <= M; i++) {
+               go(i);
+            }
+        }
     }
 
-    static int[] dx = { 0, 0, 1, 0, -1 }, dy = { 0, -1, 0, 1, 0 };
+    static int[] dr = {0, -1, 0, 1, 0}, dc = {0, 0, 1, 0, -1};
+    private static void go(int m) {
+        rA += dr[A[m]];
+        cA += dc[A[m]];
+        rB += dr[B[m]];
+        cB += dc[B[m]];
 
-    private static void go() {
-        int[] a = { 1, 1 };
-        int[] b = { 10, 10 };
+        int a = map[rA][cA], b = map[rB][cB];
 
-        for (int d = 0; d <= M; d++) { // 0초부터
-            // 이동 위치
-            a[0] += dx[dirA[d]];
-            a[1] += dy[dirA[d]];
-            b[0] += dx[dirB[d]];
-            b[1] += dy[dirB[d]];
+        if(a > 0 && b > 0 && a == b) { // 0이 아닌, 같은 곳에 있을 때
 
-            int max = 0; // 해당위치에서 가장 큰 값 저장
-            // 해당 위치일 때 사용 충전소 모든경우
-            for (int i = 0; i < BC.length; i++) { // a
-                for (int j = 0; j < BC.length; j++) { // b
-                    int sum = 0;
-                    int[] charge = new int[2]; // a, b 충전값 저장
-                    // 해당위치와 BC 거리
-                    int tmpA = Math.abs(a[0] - BC[i].x) + Math.abs(a[1] - BC[i].y);
-                    int tmpB = Math.abs(b[0] - BC[j].x) + Math.abs(b[1] - BC[j].y);
+        } else if(a < 0 && b < 0) { // 둘 다 중복 위치에 있을 때
 
-                    if (tmpA > BC[i].range && tmpB > BC[j].range)
-                        continue; // 둘 다 0이면 그냥 넘겨
+        } else if(a < 0) { // a만 중복 위치에 있을 때
 
-                    if (tmpA <= BC[i].range)
-                        charge[0] = BC[i].power;
-                    if (tmpB <= BC[j].range)
-                        charge[1] = BC[j].power;
+        } else if(b < 0) { // b만 중복 위치에 있을 때
 
-                    if (i == j)
-                        sum += Math.max(charge[0], charge[1]);
-                    else
-                        sum += charge[0] + charge[1];
-                    max = Math.max(max, sum);
+        }  else if(a == 0) {
+
+        } else { // 서로 다르거나, 둘이 0일 때
+
+        }
+    }
+
+    private static void set(int row, int col, int range, int num) {
+        for (int r = 0; r < 10; r++) {
+            for (int c = 0; c < 10; c++) {
+                int dis = Math.abs(row-r) + Math.abs(col-c);
+
+                if(dis <= range) {
+                    if(map[r][c] > 0) {
+                        List<Integer> list = new ArrayList<>();
+                        list.add(map[r][c]);
+                        list.add(num);
+
+                        O.put(--idx,list);
+                        map[r][c] = idx;
+                    }
+                    else if(map[r][c] < 0) {
+                        List<Integer> list = O.get(map[r][c]);
+                        list.add(num);
+
+                        O.put(map[r][c], list);
+                    }
+                    else map[r][c] = num;
                 }
             }
-            answer += max;
         }
-
     }
 
 }
