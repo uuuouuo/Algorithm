@@ -1,6 +1,5 @@
 package 소프티어;
 
-import java.util.*;
 import java.io.*;
 
 public class 지도자동구축 {
@@ -15,6 +14,4 @@ public class 지도자동구축 {
         // 라인 당 점 개수 : 칸 개수 + 1
         System.out.println((int)Math.pow((Math.pow(2, N)+1), 2));
     }
-
-
 }
