@@ -15,7 +15,7 @@ import java.util.*;
 
 public class bj20055 {
 
-    static int N, K, step, start, end, belt[];
+    static int N, K, step, belt[], size;
     static boolean robot[];
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -31,74 +31,71 @@ public class bj20055 {
             belt[i] = Integer.parseInt(st.nextToken());
         }
 
+        size = 2 * N; // 벨트 길이
         step = 0; // 단계 수
-        start = 0; // 로봇이 올라가는 위치
-        end = N; // 로봇이 내려가는 위치
 
         while(K > 0) {
             step++; // 단계 올리기
 
-            /* 진행 순서 */
-
-            moveBelt(); // 벨트 회전 + 위에 있는 로봇도 함께 회전 (내릴위치에서 로봇 내리기)
-            moveRobot();// 로봇 옆 벨트로 이동 -> 내구도 0 or 로봇 있으면 이동 불가
-            putRobot();// 올리는 위치에 올리기
+            moveBelt(); // step1. 벨트 이동
+            moveRobot(); // step2. 로봇 이동
+            putRobot(); // step3. 로봇 올리기
         }
         System.out.println(step);
     }
 
-
-    private static void moveBelt() {
-        start--;
-        end--;
-
-        if(start < 0) start = 2 * N - 1;
-        if(end < 0) end = 2 * N- 1;
-
-        // 로봇도 이동해주기 => 내릴위치라면 없애기
-        for (int i = 2 * N - 1; i >= 0; i--) {
-            if(!robot[i]) continue; // 해당 위치에 로봇이 없으면 패쓰
-
-            // 벨트위 로봇이 있으면
-            robot[i] = false; // 해당 벨트의 로봇 없애주고
-
-            if(i != end) { // 내릴위치가 아니라면 다음 벨트로 이동
-                if(i == 2 * N - 1) robot[0] = true;
-                else robot[i+1] = true;
-            }
-
-        }
-    }
-
-    private static void moveRobot() {
-        int cur, next;
-
-        // 내릴위치 제외하고 로봇 이동
-        for (int i = 0; i < N; i++) {
-            // 내릴위치 0일 때
-            if(end - i < 0)  cur = 2 * N - 1 - i;
-            else cur = end - i;
-
-            if(cur == 2 * N - 1) next = 0;
-            else next = cur + 1;
-
-            // 현재 위치에 로봇이 없거나, 다음 위치에 로봇이 있거나, 다음 벨트 내구성이 0이라면
-            if(!robot[cur] || robot[next] || belt[next] == 0) continue;
-
-            robot[cur] = false; // 현재위치에 로봇 없어지고
-            robot[next] = true; // 다음 위치에 두기
-            belt[next]--; // 이동된 벨트 내구성 감소
-
-            if(belt[next] == 0) K--;
-        }
-    }
-
     private static void putRobot() {
-        if(robot[start] || belt[start] == 0) return;
+        // 올리는 위치에 로봇이 있거나 내구성이 0이면 return
+        if(robot[0] || belt[0] == 0) return;
 
-        robot[start] = true;
-        belt[start]--;
+        // 로봇 올리고, 벨트 내구성 감소
+        robot[0] = true;
+        belt[0]--;
 
-        if(belt[start] == 0) K--;
+        if(belt[0] == 0) K--;
     }
+
+    /**
+     * 벨트는 그대로, 로봇만 이동
+     */
+    private static void moveRobot() {
+        robot[(size/2)-1] = false; // 내리는 위치이므로 false
+
+        for (int i = (size/2)-2; i >= 0; i--) {
+            // 현재 위치에 로봇이 없거나
+            // 다음 위치에 로봇이 있거나
+            // 다음 위치 벨트의 내구성이 0이면 패스
+            if(!robot[i] || robot[i+1] || belt[i+1] == 0) continue;
+
+            // 한칸 옆으로 이동하고 다음 벨트 내구성 감소
+            robot[i] = false;
+            robot[i+1] = true;
+            belt[i+1]--;
+
+            if(belt[i+1] == 0) K--;
+        }
+        robot[0] = false;
+    }
+
+    /**
+     * 벨트와 벨트 위 로봇 이동 함수
+     */
+    private static void moveBelt() {
+        // 벨트 한칸씩 이동
+        int tmp = belt[size-1];
+        for (int i = size-2; i >= 0; i--) {
+            belt[i+1] = belt[i];
+        }
+        belt[0] = tmp;
+
+        // 벨트 위 로봇이동
+        for (int i = (size/2)-2; i >= 0; i--) {
+            if(robot[i]) robot[i+1] = true;
+            else robot[i+1] = false;
+        }
+        robot[0] = false;
+    }
+
+
+
 }
