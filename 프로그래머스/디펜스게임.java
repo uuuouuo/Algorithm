@@ -27,5 +27,5 @@ public class 디펜스게임 {
         }
         return answer;
     }
-    
+
 }
