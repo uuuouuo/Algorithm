@@ -1,6 +1,7 @@
 package 프로그래머스;
 
 public class 숫자변환하기 {
+    // 다시 풀어야 하는 문제 !
     public int solution(int x, int y, int n) {
         int answer = -1;
 
@@ -10,9 +11,9 @@ public class 숫자변환하기 {
         for(int i = x+1; i < y+1; i++) {
             int a = MAX, b = MAX, c = MAX, min;
 
-            if(isDivided(i, 3) && isAdoved(i/3, x)) a = dp[i/3];
-            if(isDivided(i, 2) && isAdoved(i/2, x)) b = dp[i/2];
-            if(isAdoved(i-n, x)) c = dp[i-n];
+            if(isDivided(i, 3) && isBigger(i/3, x)) a = dp[i/3];
+            if(isDivided(i, 2) && isBigger(i/2, x)) b = dp[i/2];
+            if(isBigger(i-n, x)) c = dp[i-n];
 
             min = Math.min(Math.min(a, b), c); // 최소 경우수 구하기
 
@@ -25,11 +26,13 @@ public class 숫자변환하기 {
         return answer;
     }
 
+    // 나누어지는지, 양의 정수인지 확인
     static boolean isDivided(int target, int n) {
         return (target%n == 0) && (target/n > 0);
     }
 
-    static boolean isAdoved(int n, int x) {
+    // x보다 더 큰 수인지 확인
+    static boolean isBigger(int n, int x) {
         return n >= x;
     }
 }
