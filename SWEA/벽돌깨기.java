@@ -1,3 +1,5 @@
+package SWEA;
+
 import java.util.*;
 
 public class 벽돌깨기 {
